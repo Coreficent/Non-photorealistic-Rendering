@@ -6,7 +6,7 @@
 
     public class Test
     {
-        private static readonly string delimiter = " -> ";
+        private static readonly string delimiter = " - ";
         private static readonly string terminator = ".";
 
         public static void Pause()
@@ -35,92 +35,107 @@
         {
             Warn("Debug", message);
         }
+
         public static void ToDo(params object[] message)
         {
             Warn("Todo", message);
         }
-        public static void Start(params object[] message)
-        {
-            Initialize("Start", message);
-        }
-        public static void Initialize(string name, params object[] message)
-        {
-            Log("Initialized" + delimiter + name, message);
-        }
+
         public static void Log(params object[] message)
         {
-            Output("Log", message);
+            Output("Log", ConcatenateMessage(message));
         }
+
         public static void Warn(params object[] message)
         {
-            Output("Warn", message);
+            Output("Warn", ConcatenateMessage(message));
         }
 
         public static void Error(params object[] message)
         {
-            Output("Error", message);
+            Output("Error", ConcatenateMessage(message));
         }
 
-        private static void Output(string messageType, params object[] variables)
+        private static string ConcatenateMessage(params object[] variables)
         {
-            if (DebugMode.On)
+            string buffer = "";
+
+            foreach (object i in variables)
             {
-                string message = "";
+                buffer += delimiter;
 
-                foreach (object i in variables)
+                if (i == null)
                 {
-                    message += delimiter;
-
-                    if (i == null)
+                    buffer += "null";
+                }
+                else if (i is string)
+                {
+                    if (i as string == "")
                     {
-                        message += "null";
+                        buffer += "empty";
                     }
                     else
                     {
-                        if (i is string)
-                        {
-                            message += i;
-                        }
-                        else if (i.GetType().GetInterface(nameof(IEnumerable)) != null)
-                        {
-                            message += "[";
-                            IEnumerable enumerable = (i as IEnumerable);
-
-                            foreach (var item in enumerable)
-                            {
-                                message += item;
-                                message += ",";
-                            }
-
-                            message = message.Remove(message.Length - 1);
-
-                            message += "]";
-                        }
-                        else
-                        {
-                            message += i;
-                        }
+                        buffer += i;
                     }
-
-
                 }
+                else
+                {
+                    if (i is IEnumerable)
+                    {
+                        string listBuffer = "";
 
+                        string listDelimiter = ", ";
+
+                        listBuffer += "[";
+
+                        IEnumerable enumerable = (i as IEnumerable);
+
+                        foreach (var item in enumerable)
+                        {
+                            listBuffer += listDelimiter;
+                            listBuffer += item;
+                        }
+
+                        listBuffer += "]";
+
+                        if (listBuffer.Length != 2)
+                        {
+                            listBuffer = listBuffer.Remove(1, listDelimiter.Length);
+                        }
+
+                        buffer += listBuffer;
+                    }
+                    else
+                    {
+                        buffer += i;
+                    }
+                }
+            }
+
+            return buffer;
+        }
+
+        private static void Output(string messageType, string concatenatedMessage)
+        {
+            if (DebugMode.On)
+            {
                 switch (messageType)
                 {
                     case "Error":
-                        UnityEngine.Debug.LogError(messageType + message + terminator);
+                        UnityEngine.Debug.LogError(messageType + concatenatedMessage + terminator);
                         break;
 
                     case "Warn":
-                        UnityEngine.Debug.LogWarning(messageType + message + terminator);
+                        UnityEngine.Debug.LogWarning(messageType + concatenatedMessage + terminator);
                         break;
 
                     case "Todo":
-                        UnityEngine.Debug.Log(messageType + message + terminator);
+                        UnityEngine.Debug.Log(messageType + concatenatedMessage + terminator);
                         break;
 
                     default:
-                        UnityEngine.Debug.Log(messageType + message + terminator);
+                        UnityEngine.Debug.Log(messageType + concatenatedMessage + terminator);
                         break;
                 }
             }
