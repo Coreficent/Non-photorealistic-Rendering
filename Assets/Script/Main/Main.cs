@@ -1,17 +1,28 @@
 ﻿namespace Coreficent.Main
 {
+    using Coreficent.Preset;
     using Coreficent.Utility;
-    using System.Collections.Generic;
+    using UnityEngine;
 
     public class Main : Script
     {
+        [SerializeField]
+        private PresetBase standardShader;
+
+        [SerializeField]
+        private SkinnedMeshRenderer body;
+
+
         private Main()
         {
-            List<string> list = new List<string>();
-            list.Add("tt");
-            list.Add("dd");
 
-            Test.Warn("test list", list, new List<string>(), "");
+        }
+
+        protected override void Start()
+        {
+            body.material = standardShader.Body;
+
+            base.Start();
         }
     }
 }

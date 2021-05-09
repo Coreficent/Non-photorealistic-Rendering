@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4840369684631475702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6950263616918775562}
+  - component: {fileID: 6727123289081891909}
+  m_Layer: 0
+  m_Name: Standard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6950263616918775562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840369684631475702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6727123289081891909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840369684631475702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1845fd24542e5e84b8b641b0a780f5d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Body: {fileID: 2100000, guid: e09d44c14d2e8354d9af9687217607c5, type: 2}
+  EyeL1: {fileID: 2100000, guid: 56768e70888c1f04eb30ad2941559160, type: 2}
+  EyeR1: {fileID: 2100000, guid: c95b30b9a591abc429c8ecfb4b7648e6, type: 2}
+  EyeBase: {fileID: 2100000, guid: a5d2d42b5dc4be747a6e7f3d1442aa22, type: 2}
+  EyeLine: {fileID: 2100000, guid: 86b8d6745e1e6224e8b85660746ccfc8, type: 2}
+  Face: {fileID: 2100000, guid: 43048990c5254a44dafca72180fa0907, type: 2}
+  Hair: {fileID: 2100000, guid: cc9e49bd2a4c0bf4592a04f1dd8fe6da, type: 2}
+  Left: {fileID: 2100000, guid: 4d5689c577447624e944e8c95ab943bc, type: 2}
+  MatCheek: {fileID: 2100000, guid: aa92fe513eca21240ac0d69b0ca594e5, type: 2}
+  Right: {fileID: 2100000, guid: a8d94ed91a72d2c4da44e5b2f749848c, type: 2}
+  Skin: {fileID: 2100000, guid: ea5178cdbae4ee242a705665cf4adfc9, type: 2}
