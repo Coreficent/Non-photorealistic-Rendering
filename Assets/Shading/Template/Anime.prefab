@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4840369684631475702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6950263616918775562}
+  - component: {fileID: 6727123289081891909}
+  m_Layer: 0
+  m_Name: Anime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6950263616918775562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840369684631475702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6727123289081891909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840369684631475702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1845fd24542e5e84b8b641b0a780f5d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Body: {fileID: 2100000, guid: 83da4e1dc602d1e4195d48224484a540, type: 2}
+  EyeL1: {fileID: 2100000, guid: e4ecec0e0ba34f8469b16673192624af, type: 2}
+  EyeR1: {fileID: 2100000, guid: 30c49a1659951d84aa6361458316041e, type: 2}
+  EyeBase: {fileID: 2100000, guid: c576f6bd806d19142a46d5964ddc06aa, type: 2}
+  EyeLine: {fileID: 2100000, guid: aa3e012637a2ddc49b83520ab1e51b5d, type: 2}
+  Face: {fileID: 2100000, guid: fe66c9e9d87c4584ca7dff5183ee0119, type: 2}
+  Hair: {fileID: 2100000, guid: 8b1d5492c86a0b44c8d4d28fd699e2c1, type: 2}
+  Left: {fileID: 2100000, guid: 49b43c6ba7788534db79e24c5ab29f55, type: 2}
+  MatCheek: {fileID: 2100000, guid: 35e04e29f738d7e45a231ba3564a8695, type: 2}
+  Right: {fileID: 2100000, guid: 68450479cc55b1c4e9df9bf13168a882, type: 2}
+  Skin: {fileID: 2100000, guid: f81371a345c031345874299a8e8c82ed, type: 2}

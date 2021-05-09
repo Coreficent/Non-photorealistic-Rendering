@@ -527,6 +527,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardShader: {fileID: 6727123289081891909, guid: cb09c6c5ad0e176459cfc8171982ee6a,
     type: 3}
+  unityShader: {fileID: 6727123289081891909, guid: 44ed65acbca8ec247b4cdf36e273e041,
+    type: 3}
+  animeShader: {fileID: 6727123289081891909, guid: 0438e9bd49e78d343844fde0f2d8a4b5,
+    type: 3}
   unityModel: {fileID: 406256773}
 --- !u!4 &1552920518
 Transform:
