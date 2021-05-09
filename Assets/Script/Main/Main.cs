@@ -10,7 +10,7 @@
         private PresetBase standardShader;
 
         [SerializeField]
-        private SkinnedMeshRenderer body;
+        private UnityModel unityModel;
 
 
         private Main()
@@ -20,7 +20,11 @@
 
         protected override void Start()
         {
-            body.material = standardShader.Body;
+            unityModel.Body = standardShader.Body;
+            unityModel.Hair = standardShader.Hair;
+            //unityModel.MatCheek = standardShader.MatCheek;
+            unityModel.Skin = standardShader.Skin;
+            unityModel.Face = standardShader.Face;
 
             base.Start();
         }
