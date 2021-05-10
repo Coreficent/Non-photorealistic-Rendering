@@ -33,14 +33,26 @@
             if (GUI.Button(new Rect(Screen.width - 100, 140, 80, 20), "Standard"))
             {
                 Test.Debug("Standard shader");
+                unityModel.Body = standardShader.Body;
+                unityModel.Hair = standardShader.Hair;
+                unityModel.Skin = standardShader.Skin;
+                unityModel.Face = standardShader.Face;
             }
             if (GUI.Button(new Rect(Screen.width - 100, 170, 80, 20), "Unity"))
             {
                 Test.Debug("Unity shader");
+                unityModel.Body = unityShader.Body;
+                unityModel.Hair = unityShader.Hair;
+                unityModel.Skin = unityShader.Skin;
+                unityModel.Face = unityShader.Face;
             }
             if (GUI.Button(new Rect(Screen.width - 100, 200, 80, 20), "Coreficent"))
             {
                 Test.Debug("Coreficent shader");
+                unityModel.Body = animeShader.Body;
+                unityModel.Hair = animeShader.Hair;
+                unityModel.Skin = animeShader.Skin;
+                unityModel.Face = animeShader.Face;
             }
 
             bool hullToggle = GUI.Toggle(new Rect(Screen.width - 100, 230, 80, 20), hullToggleD, "hullToggleD");
