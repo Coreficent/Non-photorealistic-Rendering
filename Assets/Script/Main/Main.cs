@@ -18,7 +18,8 @@
         [SerializeField]
         private UnityModel unityModel;
 
-        private bool toggled = false;
+        private bool hullToggleD = false;
+        private bool sobelToggleD = false;
 
         private Main()
         {
@@ -27,18 +28,35 @@
 
         protected void OnGUI()
         {
-            GUI.Box(new Rect(Screen.width - 110, 110, 100, 90), "Change Shader");
-            if (GUI.Button(new Rect(Screen.width - 100, 140, 80, 20), "Next Shader"))
+            GUI.Box(new Rect(Screen.width - 110, 110, 100, 180), "Change Shader");
+
+            if (GUI.Button(new Rect(Screen.width - 100, 140, 80, 20), "Standard"))
             {
-                Test.Debug("next shader");
+                Test.Debug("Standard shader");
+            }
+            if (GUI.Button(new Rect(Screen.width - 100, 170, 80, 20), "Unity"))
+            {
+                Test.Debug("Unity shader");
+            }
+            if (GUI.Button(new Rect(Screen.width - 100, 200, 80, 20), "Coreficent"))
+            {
+                Test.Debug("Coreficent shader");
             }
 
-            bool toggleState = GUI.Toggle(new Rect(Screen.width - 100, 170, 80, 20), toggled, "toggled");
+            bool hullToggle = GUI.Toggle(new Rect(Screen.width - 100, 230, 80, 20), hullToggleD, "hullToggleD");
 
-            if (toggleState != toggled)
+            if (hullToggle != hullToggleD)
             {
-                toggled = toggleState;
-                Test.Debug("toggle", toggled);
+                hullToggleD = hullToggle;
+                Test.Debug("toggle", hullToggleD);
+            }
+
+            bool sobelToggle = GUI.Toggle(new Rect(Screen.width - 100, 260, 80, 20), sobelToggleD, "sobelToggle");
+
+            if (sobelToggle != sobelToggleD)
+            {
+                sobelToggleD = sobelToggle;
+                Test.Debug("toggle", sobelToggleD);
             }
         }
 
