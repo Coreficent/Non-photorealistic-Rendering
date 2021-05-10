@@ -7,20 +7,26 @@
     {
         [SerializeField] private Material material;
 
+        private bool on = false;
+
         protected void OnRenderImage(RenderTexture source, RenderTexture destination)
         {
+            if (on)
+            {
+                Graphics.Blit(source, destination, material);
+            }
+            else
+            {
+                Graphics.Blit(source, destination);
+            }
+        }
 
-
-
-
-
-
-
-
-
-            Graphics.Blit(source, destination, material);
-
-            
+        public bool On
+        {
+            set
+            {
+                on = value;
+            }
         }
     }
 }

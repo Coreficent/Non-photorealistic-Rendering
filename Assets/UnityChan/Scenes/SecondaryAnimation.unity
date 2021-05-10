@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 180302168}
   - component: {fileID: 180302167}
   - component: {fileID: 180302172}
+  - component: {fileID: 180302169}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -175,6 +176,19 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180302166}
   m_Enabled: 1
+--- !u!114 &180302169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180302166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafb8daf6c542f042930f9560675334c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: fcfea7f99f2bb8e4597f122c7182bdf5, type: 2}
 --- !u!20 &180302170
 Camera:
   m_ObjectHideFlags: 0
@@ -532,6 +546,7 @@ MonoBehaviour:
   animeShader: {fileID: 6727123289081891909, guid: 0438e9bd49e78d343844fde0f2d8a4b5,
     type: 3}
   unityModel: {fileID: 406256773}
+  postProcessor: {fileID: 180302169}
 --- !u!4 &1552920518
 Transform:
   m_ObjectHideFlags: 0

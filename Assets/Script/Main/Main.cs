@@ -1,6 +1,7 @@
 ﻿namespace Coreficent.Main
 {
     using Coreficent.Preset;
+    using Coreficent.Shading;
     using Coreficent.Utility;
     using UnityEngine;
 
@@ -18,8 +19,11 @@
         [SerializeField]
         private UnityModel unityModel;
 
-        private bool hullToggleD = false;
-        private bool sobelToggleD = false;
+        [SerializeField]
+        private PostProcessor postProcessor;
+
+        private bool hullToggled = false;
+        private bool sobelToggled = false;
 
         private Main()
         {
@@ -32,7 +36,6 @@
 
             if (GUI.Button(new Rect(Screen.width - 100, 140, 80, 20), "Standard"))
             {
-                Test.Debug("Standard shader");
                 unityModel.Body = standardShader.Body;
                 unityModel.Hair = standardShader.Hair;
                 unityModel.Skin = standardShader.Skin;
@@ -40,35 +43,41 @@
             }
             if (GUI.Button(new Rect(Screen.width - 100, 170, 80, 20), "Unity"))
             {
-                Test.Debug("Unity shader");
                 unityModel.Body = unityShader.Body;
                 unityModel.Hair = unityShader.Hair;
                 unityModel.Skin = unityShader.Skin;
                 unityModel.Face = unityShader.Face;
             }
-            if (GUI.Button(new Rect(Screen.width - 100, 200, 80, 20), "Coreficent"))
+            if (GUI.Button(new Rect(Screen.width - 100, 200, 80, 20), "Anime"))
             {
-                Test.Debug("Coreficent shader");
                 unityModel.Body = animeShader.Body;
                 unityModel.Hair = animeShader.Hair;
                 unityModel.Skin = animeShader.Skin;
                 unityModel.Face = animeShader.Face;
             }
 
-            bool hullToggle = GUI.Toggle(new Rect(Screen.width - 100, 230, 80, 20), hullToggleD, "hullToggleD");
+            bool hullToggle = GUI.Toggle(new Rect(Screen.width - 100, 230, 80, 20), hullToggled, "hullToggleD");
 
-            if (hullToggle != hullToggleD)
+            if (hullToggle != hullToggled)
             {
-                hullToggleD = hullToggle;
-                Test.Debug("toggle", hullToggleD);
+                hullToggled = hullToggle;
+
+                if (hullToggled)
+                {
+                    animeShader.OutlineWidth = 0.005f;
+                }
+                else
+                {
+                    animeShader.OutlineWidth = 0.0f;
+                }
             }
 
-            bool sobelToggle = GUI.Toggle(new Rect(Screen.width - 100, 260, 80, 20), sobelToggleD, "sobelToggle");
+            bool sobelToggle = GUI.Toggle(new Rect(Screen.width - 100, 260, 80, 20), sobelToggled, "sobelToggle");
 
-            if (sobelToggle != sobelToggleD)
+            if (sobelToggle != sobelToggled)
             {
-                sobelToggleD = sobelToggle;
-                Test.Debug("toggle", sobelToggleD);
+                sobelToggled = sobelToggle;
+                postProcessor.On = sobelToggled;
             }
         }
 
