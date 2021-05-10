@@ -18,9 +18,28 @@
         [SerializeField]
         private UnityModel unityModel;
 
+        private bool toggled = false;
+
         private Main()
         {
 
+        }
+
+        protected void OnGUI()
+        {
+            GUI.Box(new Rect(Screen.width - 110, 110, 100, 90), "Change Shader");
+            if (GUI.Button(new Rect(Screen.width - 100, 140, 80, 20), "Next Shader"))
+            {
+                Test.Debug("next shader");
+            }
+
+            bool toggleState = GUI.Toggle(new Rect(Screen.width - 100, 170, 80, 20), toggled, "toggled");
+
+            if (toggleState != toggled)
+            {
+                toggled = toggleState;
+                Test.Debug("toggle", toggled);
+            }
         }
 
         protected void Update()
