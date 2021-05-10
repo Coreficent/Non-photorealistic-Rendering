@@ -34,19 +34,19 @@
         {
             GUI.Box(new Rect(Screen.width - 110, 110, 100, 180), "Change Shader");
 
-            if (GUI.Button(new Rect(Screen.width - 100, 140, 80, 20), "Standard"))
-            {
-                unityModel.Body = standardShader.Body;
-                unityModel.Hair = standardShader.Hair;
-                unityModel.Skin = standardShader.Skin;
-                unityModel.Face = standardShader.Face;
-            }
-            if (GUI.Button(new Rect(Screen.width - 100, 170, 80, 20), "Unity"))
+            if (GUI.Button(new Rect(Screen.width - 100, 140, 80, 20), "Unity"))
             {
                 unityModel.Body = unityShader.Body;
                 unityModel.Hair = unityShader.Hair;
                 unityModel.Skin = unityShader.Skin;
                 unityModel.Face = unityShader.Face;
+            }
+            if (GUI.Button(new Rect(Screen.width - 100, 170, 80, 20), "Standard"))
+            {
+                unityModel.Body = standardShader.Body;
+                unityModel.Hair = standardShader.Hair;
+                unityModel.Skin = standardShader.Skin;
+                unityModel.Face = standardShader.Face;
             }
             if (GUI.Button(new Rect(Screen.width - 100, 200, 80, 20), "Anime"))
             {
