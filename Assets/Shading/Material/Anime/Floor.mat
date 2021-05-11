@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _OutlineDarkness: 0
-    - _OutlineThickness: 0.5
+    - _OutlineThickness: 0.005
     - _PrecalculatedNormal: 0
     - _ShadeThreshold: 0.5
     - _ShadingDarkness: 0.5

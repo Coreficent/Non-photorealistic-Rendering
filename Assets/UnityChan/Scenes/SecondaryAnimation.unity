@@ -547,6 +547,7 @@ MonoBehaviour:
     type: 3}
   unityModel: {fileID: 406256773}
   postProcessor: {fileID: 180302169}
+  floor: {fileID: 1799658846}
 --- !u!4 &1552920518
 Transform:
   m_ObjectHideFlags: 0

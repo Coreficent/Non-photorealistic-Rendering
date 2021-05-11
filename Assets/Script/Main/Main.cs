@@ -20,10 +20,10 @@
         private UnityModel unityModel;
 
         [SerializeField]
-        private MeshRenderer floor;
+        private PostProcessor postProcessor;
 
         [SerializeField]
-        private PostProcessor postProcessor;
+        private MeshRenderer floor;
 
         private bool hullToggled = false;
         private bool sobelToggled = false;
@@ -31,6 +31,12 @@
         private Main()
         {
 
+        }
+
+        protected override void Start()
+        {
+            animeShader.OutlineWidth = 0.0f;
+            base.Start();
         }
 
         protected void OnGUI()
