@@ -5,6 +5,10 @@
     using Coreficent.Utility;
     using UnityEngine;
 
+    /*
+     * The main entry of the application
+     */
+
     public class Main : Script
     {
         [SerializeField]
@@ -28,16 +32,15 @@
         private bool hullToggled = false;
         private bool sobelToggled = false;
 
-        private Main()
-        {
-
-        }
-
         protected override void Start()
         {
             animeShader.OutlineWidth = 0.0f;
             base.Start();
         }
+
+        /*
+         * User interface control
+         */
 
         protected void OnGUI()
         {
@@ -90,31 +93,6 @@
             {
                 sobelToggled = sobelToggle;
                 postProcessor.On = sobelToggled;
-            }
-        }
-
-        protected void Update()
-        {
-            if (Input.GetKey(KeyCode.Alpha1))
-            {
-                unityModel.Body = unityShader.Body;
-                unityModel.Hair = unityShader.Hair;
-                unityModel.Skin = unityShader.Skin;
-                unityModel.Face = unityShader.Face;
-            }
-            else if (Input.GetKey(KeyCode.Alpha2))
-            {
-                unityModel.Body = standardShader.Body;
-                unityModel.Hair = standardShader.Hair;
-                unityModel.Skin = standardShader.Skin;
-                unityModel.Face = standardShader.Face;
-            }
-            else if (Input.GetKey(KeyCode.Alpha3))
-            {
-                unityModel.Body = animeShader.Body;
-                unityModel.Hair = animeShader.Hair;
-                unityModel.Skin = animeShader.Skin;
-                unityModel.Face = animeShader.Face;
             }
         }
 

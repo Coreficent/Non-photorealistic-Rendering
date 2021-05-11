@@ -3,6 +3,10 @@
     using Coreficent.Utility;
     using UnityEngine;
 
+    /*
+     * Unity moscot material interface
+     */
+
     public class UnityModel : Script
     {
         [SerializeField]

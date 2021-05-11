@@ -3,6 +3,10 @@
     using Coreficent.Utility;
     using UnityEngine;
 
+    /*
+     * shader and material preset holder
+     */
+
     public class PresetBase : Script
     {
         public Material Body;
