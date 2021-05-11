@@ -54,3 +54,4 @@ MonoBehaviour:
   MatCheek: {fileID: 2100000, guid: aa92fe513eca21240ac0d69b0ca594e5, type: 2}
   Right: {fileID: 2100000, guid: a8d94ed91a72d2c4da44e5b2f749848c, type: 2}
   Skin: {fileID: 2100000, guid: ea5178cdbae4ee242a705665cf4adfc9, type: 2}
+  Floor: {fileID: 2100000, guid: e90489557f292234d9d2c624e73eaaa5, type: 2}

@@ -16,6 +16,7 @@
         public Material MatCheek;
         public Material Right;
         public Material Skin;
+        public Material Floor;
 
         public float OutlineWidth
         {
@@ -32,6 +33,7 @@
                 MatCheek.SetFloat("_OutlineThickness", value);
                 Right.SetFloat("_OutlineThickness", value);
                 Skin.SetFloat("_OutlineThickness", value);
+                Floor.SetFloat("_OutlineThickness", value);
             }
         }
     }

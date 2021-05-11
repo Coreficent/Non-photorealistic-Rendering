@@ -20,6 +20,9 @@
         private UnityModel unityModel;
 
         [SerializeField]
+        private MeshRenderer floor;
+
+        [SerializeField]
         private PostProcessor postProcessor;
 
         private bool hullToggled = false;
@@ -40,6 +43,7 @@
                 unityModel.Hair = unityShader.Hair;
                 unityModel.Skin = unityShader.Skin;
                 unityModel.Face = unityShader.Face;
+                floor.material = unityShader.Floor;
             }
             if (GUI.Button(new Rect(Screen.width - 100, 170, 80, 20), "Standard"))
             {
@@ -47,6 +51,7 @@
                 unityModel.Hair = standardShader.Hair;
                 unityModel.Skin = standardShader.Skin;
                 unityModel.Face = standardShader.Face;
+                floor.material = standardShader.Floor;
             }
             if (GUI.Button(new Rect(Screen.width - 100, 200, 80, 20), "Anime"))
             {
@@ -54,6 +59,7 @@
                 unityModel.Hair = animeShader.Hair;
                 unityModel.Skin = animeShader.Skin;
                 unityModel.Face = animeShader.Face;
+                floor.material = animeShader.Floor;
             }
 
             bool hullToggle = GUI.Toggle(new Rect(Screen.width - 100, 230, 80, 20), hullToggled, "hullToggleD");

@@ -47,7 +47,7 @@ Material:
     - _EdgeThickness: 0.5
     - _FalloffPower: 0.5
     - _OutlineDarkness: 0
-    - _OutlineThickness: 0
+    - _OutlineThickness: 0.005
     - _PrecalculatedNormal: 0
     - _ShadeThreshold: 0.5
     - _ShadingDarkness: 0.5
