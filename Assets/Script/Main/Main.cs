@@ -38,6 +38,14 @@
             base.Start();
         }
 
+        public void Update()
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
+        }
+
         /*
          * User interface control
          */
