@@ -117,5 +117,10 @@
                 unityModel.Face = animeShader.Face;
             }
         }
+
+        protected void OnApplicationQuit()
+        {
+            animeShader.OutlineWidth = 0.0f;
+        }
     }
 }
