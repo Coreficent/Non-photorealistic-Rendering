@@ -68,7 +68,7 @@
                 floor.material = animeShader.Floor;
             }
 
-            bool hullToggle = GUI.Toggle(new Rect(Screen.width - 100, 230, 80, 20), hullToggled, "hullToggleD");
+            bool hullToggle = GUI.Toggle(new Rect(Screen.width - 100, 230, 80, 20), hullToggled, " Outline ");
 
             if (hullToggle != hullToggled)
             {
@@ -84,7 +84,7 @@
                 }
             }
 
-            bool sobelToggle = GUI.Toggle(new Rect(Screen.width - 100, 260, 80, 20), sobelToggled, "sobelToggle");
+            bool sobelToggle = GUI.Toggle(new Rect(Screen.width - 100, 260, 80, 20), sobelToggled, " Sobel   ");
 
             if (sobelToggle != sobelToggled)
             {
